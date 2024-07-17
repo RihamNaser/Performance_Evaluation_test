@@ -34,7 +34,7 @@ class Performance_Evaluation_test(unittest.TestCase):
         self.driver.get(self.path)
         login_page.log_in(username, password)
 
-        login_success = performance_page.check_login_success(user_type)
+        login_success = performance_page.check_login_success(self.path, user_type)
         self.assertTrue(login_success, f'Login failed for user type: {user_type}')
 
 
